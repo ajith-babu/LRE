@@ -1,0 +1,315 @@
+2000
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link rel="shortcut icon" href="images/favicon.ico">
+ 
+
+<title>Micro Focus ALM - Performance Center 12.60 - Site Administration</title>
+<style type="text/css">
+    @media only screen and (min-width : 0px) and (max-width : 1034px) {
+        body{
+            background-image: url(images/pc_logo.png);
+            background-position: 115% 115%;
+        }
+    }
+    @media only screen and (min-width : 1054px) and (max-width : 1540px) {
+        body{
+            background-image: url(images/pc_logo.png);
+            background-position: 89% 88%;
+        }
+    }
+    @media only screen and (min-width : 1540px) {
+        body{
+            background-image: url(images/pc_logo.png);
+            background-position: 77% 83%;
+        }
+    }
+
+    body {
+        background-image: url(images/pc_logo.png);
+        background-position: 77% 108%;
+        overflow: auto;
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        background-repeat: no-repeat;
+    }
+
+    div.loadingMessagePane {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        VERTICAL-ALIGN: top;
+        display: none;
+    }
+
+    #activeXInstallInstructions {
+        text-align:left;
+        font-family: HPE-Regular-Metric;
+        font-size: 1.5em;
+        margin-left: 45px;
+        margin-top: 60px;
+    }
+
+    #InstructionsBlock {
+        position: absolute;
+        width: 800px;
+        height: 650px;
+        left: 50%;
+        top: 25%;
+        margin-top: -123px;
+        margin-left: -400px;
+        background-color: #ffffff;
+        border: 2px solid #CCCCCC;
+    }
+
+    #nonSupportedBrowser {
+        position: absolute;
+        width: 650px;
+        height: 250px;
+        left: 30%;
+        top: 35%;
+        text-align: center;
+        font-family: HPE-Regular-Metric;
+        font-size: 1.5em;
+        background-color: #ffffff;
+        border: 2px solid #CCCCCC;
+    }
+
+    #InstructionsTable {
+        border: 0;
+    }
+
+    #InstructionsTable td {
+        vertical-align: top;
+        padding-top: 1em;
+        padding-left: 0.5em;
+    }
+
+    #DeploymentFinished {
+        display: none;
+        text-align:left;
+        font-family: HPE-Regular-Metric;
+        font-size: 1.5em;
+        color:#003366;
+        padding-top:1em;
+        position: absolute;
+        border: 2px solid #CCCCCC;
+        background-color: #ffffff;
+        width: 700px;
+        height: 450px;
+        top: 37%;
+        left: 50%;
+        margin-top: -150px;
+        margin-left: -350px;
+    }
+
+    #DeploymentFinishedText {
+        text-align: center;
+        padding-top: 130px;
+    }
+
+    div.bottomPane {
+        height: 35%;
+        margin: 0 0 0 0;
+        padding: 0 0 4 0;
+        VERTICAL-ALIGN: top;
+        display: block;
+    }
+    img.hp_logo {
+        margin-left: 47px;
+        margin-right: -29px;
+    }
+
+    img.hp_logo_deployment_finished {
+        margin-left: 47px;
+    }
+
+    @font-face {
+        font-family: HPE-Bold-Metric;
+        src: url("fonts/MetricWeb-Bold.woff");
+    }
+
+    @font-face {
+        font-family: HPE-Regular-Metric;
+        src: url("fonts/MetricWeb-Regular.woff");
+    }
+
+    p.alm_header {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: HPE-Bold-Metric;
+        color: #000000;
+    }
+
+    p.alm_header_deployment_finished {
+        margin-top: 5px;
+        margin-left: 30px;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: HPE-Bold-Metric;
+        color: #000000;
+    }
+
+    p.loading_header {
+        font-weight: bold;
+        font-size: 18px;
+        font-family: HPE-Regular-Metric;
+        margin-top: -10px;
+        color: #0073E7;
+    }
+
+    table.top {
+        height: 200px;
+        height: 36%;
+    }
+
+    table.header {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        margin-top: -115px;
+        margin-left: -350px;
+        width: 704px;
+        height: 200px;
+        border: 2px solid #CCCCCC;
+        border-bottom-color: #FFFFFF;
+        vertical-align: top;
+    }
+    #MQC {
+        background-color: #ffffff;
+        position: absolute;
+        left: 50%;
+        width: 700px;
+        height: 300px;
+        margin-left: -350px;
+        border: 2px solid #CCCCCC;
+        border-top-color: #FFFFFF;
+    }
+
+</style>
+
+<script language="javascript" type="text/jscript" src="SiteAdmin.js"></script>
+
+<script language="javascript" type="text/jscript">
+  productBrand='PC';
+  productBrandDisplayName='Performance Center';
+  formattedBrandDisplayName='Micro Focus ALM - Performance Center 12.60 - Site Administration';
+  skipClientPrerequisiteCheck='false';
+  customPrerequisitePageURL='null';
+</script>
+
+</head>
+
+<body>
+<div id="loadingMessagePane" class="loadingMessagePane">
+    <table class="top">
+        <tr>
+            <td />
+        </tr>
+    </table>
+    <table class="header">
+        <tr>
+            <td>
+                <img class="hp_logo" src="images/mf_logo.png" alt="" border="0"/>
+            </td>
+            <td>
+                <p class="alm_header">Application Lifecycle Management</p>
+                <p class="loading_header" id="loading_header">Loading. Please wait...</p>
+            </td>
+        </tr>
+    </table>
+
+</div>
+  <div id="InstructionsBlock">
+    <table id="InstructionsTable">
+      <tr>
+        <td>
+          <img id="info_img" alt="" src="images/info.png" />
+        </td>
+        <td>
+          <div id="activeXInstallInstructions">
+            To install Micro Focus Application Lifecycle Management Site Admin:
+            <br>
+            <br>
+            If an information bar is displayed on the browser page:
+            <ol>
+              <li>Click the bar and select “Install”.</li>
+              <li>Click &lt;Install&gt; in the warning message.</li>
+            </ol>
+            If no information bar is displayed:
+            <ol>
+              <li><a href="ALM-Platform-Loader.msi" onclick="startLoaderInstalledCheck();">Click here to launch the installation</a>.</li>
+              <li>Click &lt;Run&gt; in the pop up message.</li>
+              <li>Click &lt;Run&gt; in the second pop up message.</li>
+            </ol>
+            Click the browser &lt;Refresh&gt; button if the application does not start loading
+            after the installation is complete.
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+<script language="javascript" type="text/jscript">
+var version =navigator.userAgent.lastIndexOf('MSIE 10.0') != -1;
+var instructionsBlock = document.getElementById("InstructionsBlock");
+if(instructionsBlock && version) {
+    
+   document.getElementsByTagName('body')[0].style.backgroundImage = "url(" + 'images/pc_logo.png' + ")";
+   document.getElementsByTagName('body')[0].style.backgroundPosition = "77% 77%";
+   document.getElementById('InstructionsBlock').style.marginTop = "-290px";
+}
+</script>  
+<div id="DeploymentFinished">
+    <table class="deploymentFinishedHeader">
+        <tr>
+            <td>
+                <img class="hp_logo_deployment_finished" src="images/mf_logo.png" alt="" border="0"/>
+            </td>
+            <td>
+                <p class="alm_header_deployment_finished">Application Lifecycle Management</p>
+            </td>
+        </tr>
+    </table>
+    <div id="DeploymentFinishedText">
+    ALM Site Admin registration complete.<br>
+    Close this browser window.
+    </div>
+</div> 
+
+  <div id="_bottomPane" class="bottomPane">
+
+    <script language="javascript" type="text/jscript">
+      Start('PC', 
+    		'Performance Center', 
+    		'Micro Focus ALM - Performance Center 12.60 - Site Administration', 
+    		'false', 
+    		'null');
+    </script>
+
+    <noscript>
+      <center>
+        <br>
+        <br>
+        JavaScript is not installed or is disabled in your browser.Please make sure your<br>
+        browser can execute JavaS
+C7
+cript in HTML pages.</center>
+    </noscript>
+  </div>
+
+  <iframe id="loaderTestFrame" onload="onTestFrameLoad();" width="100%" height="100px" style="display: none;"></iframe>
+</body>
+</html>
+
+0
+

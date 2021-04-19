@@ -1,0 +1,286 @@
+var SetupFile = "SiteAdmin_setup.cab"
+
+// Sniff Browser
+var ua = navigator.userAgent;
+var fWin32 = (ua.lastIndexOf('Win') != -1) && (ua.lastIndexOf('Windows 3.1') == -1) && (ua.lastIndexOf('Win16') == -1);
+var ieSupported = GetIeIsSupported();
+
+// check if IE is supported according to user agent string
+// important: IE user agent changed its format from IE11
+function GetIeIsSupported(){
+	return  (ua.lastIndexOf('MSIE 7.0') != -1 && ua.lastIndexOf("Trident") != -1)
+					|| (ua.lastIndexOf('MSIE 10.0') != -1)
+					|| (!!ua.match(/Trident.*rv[ :]*11\./));
+}
+
+var fActiveX = fWin32 && ieSupported;
+
+var fDownlevel = !fActiveX;
+
+var commonMode = false;
+var sharedMode = false;
+
+var productBrand;
+var productBrandDisplayName;
+var formattedBrandDisplayName;
+var skipClientPrerequisiteCheck;
+var customPrerequisitePageURL;
+
+var loaderTestStarted = false;
+
+var onReadyFired = false;
+var onUiActiveFired = false;
+
+function Start(productBrand, productBrandDisplayName, formattedBrandDisplayName, skipClientPrerequisiteCheck, customPrerequisitePageURL) {
+  Spider(productBrand, productBrandDisplayName, formattedBrandDisplayName, skipClientPrerequisiteCheck, customPrerequisitePageURL);
+}
+
+function Spider_OnReady() {
+  onReadyFired = true;
+
+  if ((!commonMode) && (!sharedMode)) {
+    HideTopPane();
+    document.body.style.overflow = "hidden";
+    SetBottomPaneVisibility(true);
+  } else {
+    ShowDeploymentFinished();
+  }
+  var mqc = document.getElementById("MQC");
+  mqc.style.width='100%';
+  mqc.style.marginLeft='0px';
+  mqc.style.left='0%';
+  mqc.style.border='none';
+  mqc.style.height='100%';  
+}
+
+function Spider_OnUIActive() {
+  onUiActiveFired = true;
+
+  SetBottomPaneVisibility(true);
+}
+
+
+function SetPaneVisibility(paneId, showPane) {
+  var pane = document.getElementById(paneId);
+  if (!pane) {
+    return;
+  }
+  
+  if (showPane)
+    pane.style.display = "block"
+  else
+    pane.style.display = "none"
+
+}
+
+function SetBottomPaneVisibility(showPane) {
+  SetPaneVisibility("_bottomPane", showPane);
+}
+
+function HideTopPane() {
+  SetPaneVisibility("loadingMessagePane", false);
+  var bottomPane = document.getElementById("_bottomPane")
+  bottomPane.style.height = "100%"
+  SetPaneVisibility("_topPane", false);
+}
+
+function ShowDeploymentFinished() {
+  SetPaneVisibility("loadingMessagePane", false);
+  SetBottomPaneVisibility(false);
+  SetPaneVisibility("DeploymentFinished", true);
+}
+
+function Write(line) {
+  document.writeln(line);
+}
+
+function SpiderInstalled(doc) {
+  if (!doc) {
+    doc = document;
+  }
+
+  var spider = doc.getElementById("MQC");
+  var result = spider ? true : false;
+
+  return result;
+}
+
+function SetStatus(status) {
+  window.status = status;
+}
+
+
+function setLoadingVisibility() {
+  var shouldDisplay = !onReadyFired && !onUiActiveFired && SpiderInstalled();
+
+  SetPaneVisibility("loadingMessagePane", shouldDisplay);
+}
+
+function Spider(productBrand, productBrandDisplayName, formattedBrandDisplayName, 
+		        skipClientPrerequisiteCheck, customPrerequisitePageURL, doc) {
+  if (!doc){
+	  doc = document;
+  }
+
+  if (!fActiveX) {
+    SetPaneVisibility("InstructionsBlock", false);
+
+    // Error for other browser or OS 
+    doc.writeln('<div style="margin: 1em 1.5em 1em 1.5em;">');
+    doc.writeln('<br>');
+    doc.writeln('You are using an unsupported browser. ALM Desktop Client supports Microsoft Internet Explorer 10 and 11.');
+    doc.writeln('</div>');
+
+    return;
+  }
+
+  SetBottomPaneVisibility(false);
+
+  var ProductName = formattedBrandDisplayName
+  SetStatus("Loading " + ProductName + ". Please Wait ...");
+
+  doc.writeln('<script language="javascript" for="MQC" event="OnReady">');
+  doc.writeln('  Spider_OnReady();');
+  doc.writeln('</script>');
+
+  doc.writeln('<script language="javascript" for="MQC" event="OnUIActive">');
+  doc.writeln(' Spider_OnUIActive();');
+  doc.writeln('</script>');
+
+  doc.writeln(' <object declare="declare" id="MQC" standby="Loading ' + ProductName + '..." ');
+  doc.writeln(' classid="CLSID:89AB6029-18C7-4579-943D-1F40ED84F5BE" ');
+  doc.writeln(' codebase="ALM-Platform-Loader.12.6x.cab#Version=12,60,969,0"');
+  doc.writeln(' class="embedObject" > ');
+  doc.writeln(' <param name="SetupFile" value="' + geturl() + SetupFile + '"/> ');
+  doc.writeln(' <param name="BrowserUI" value="0"/> ');
+  doc.writeln(' <param name="ProgColor" value="#d69600"/> ');
+  doc.writeln(' <param name="ProgBkColor" value="#FFFFFF"/> ');
+  doc.writeln(' <param name="DomainName" value="Default"/> ');
+  doc.writeln(' <param name="DomainPassword" value=""/> ');
+  doc.writeln(' <param name="TdRootURL"  value="' + getTdRootURL() + '"/> ');
+  doc.writeln(' <param name="SkipPreReqCheck"  value="' + skipClientPrerequisiteCheck + '"/> ');
+  doc.writeln(' <param name="CustomPreReqPageUrl"  value="' + customPrerequisitePageURL + '"/> ');
+  doc.writeln(' <param name="AdditionalParams"  value="'
+          + 'Brand=' + productBrand
+          + '&BrandDisplayName=' + productBrandDisplayName
+          + getAdditionalParams() + '"/> ');
+
+  var url = window.location.href.toLowerCase();
+  if (url.indexOf('common=true') == -1) {
+    doc.writeln(' <param name="IsolatedDeployment" value="true"/> ');
+  } else {
+    commonMode = true;
+    doc.writeln(' <param name="InstallationOnly" value="true"/> ');
+  }
+  if (url.indexOf('sharedmode=true') != -1)
+  {
+	sharedMode = true;
+  }
+
+  //Move instructions into object element
+  var instructions = doc.getElementById("InstructionsBlock");
+  if (instructions) {
+    instructions.parentNode.removeChild(instructions);
+    doc.writeln(instructions.outerHTML);
+  } else {
+    //Write an empty space, just to have an alternative for the control.
+    doc.writeln("<br>&nbsp;");
+  }
+
+  doc.writeln(' </object>');
+
+  SetBottomPaneVisibility(true);
+
+  SetStatus(ProductName);
+  
+  window.onload = setLoadingVisibility;
+}
+
+function getAdditionalParams() {
+  queryString = getQueryString();
+  if (queryString == "") {
+    return ("");
+  }
+
+  return ('&' + queryString);
+}
+
+function removeXSS(mm) {
+  //The first hash character (#) splits the URL from the part that is used to make the request to the server and the part that's used by the browser to correctly position the viewport.
+  var hashSignIndex = mm.indexOf("#");
+  if(hashSignIndex > 0) {
+      mm = mm.substring(0, hashSignIndex);
+  }
+  mm = mm.replace(/\?/g, "&#31;");
+  mm = mm.replace(/'/g, "&#39;");
+  mm = mm.replace(/"/g, "&#34;");
+  return mm.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function getQueryString() {
+  mm = location.href;
+  nn = mm.indexOf("?");
+
+  if (nn > 0) {
+    var params = mm.substring(nn + 1);
+    return removeXSS(params);
+  }
+
+  return ("");
+}
+
+function geturl() {
+  bb = location.protocol + "//" + location.host + "/qcbin/";
+  return (bb);
+}
+
+function getTdRootURL() {
+  bb = location.protocol + "//" + location.host + "/qcbin";
+  return (bb);
+}
+
+function startLoaderInstalledCheck() {
+  window.setInterval(initLoaderTest, 5000);
+}
+
+function getLoaderTestFrameDocument() {
+  var frame = document.getElementById("loaderTestFrame");
+  
+  //Extract document from the iframe, take into account diffrent versions of browsers.
+  if (frame.contentWindow){
+    frame = frame.contentWindow;
+  } else if (frame.contentDocument.document) {
+    frame = frame.contentDocument.document;
+  } else {
+    frame = frame.contentDocument;
+  }
+
+  return frame.document;
+}
+
+function initLoaderTest() {
+  var doc = getLoaderTestFrameDocument();
+  doc.open();
+ 
+  Spider(productBrand, productBrandDisplayName, formattedBrandDisplayName, skipClientPrerequisiteCheck, customPrerequisitePageURL, doc);
+
+  doc.close();
+
+  loaderTestStarted = true;
+}
+
+function refreshIfLoaderInstalled() {
+  if (!loaderTestStarted) {
+    return;
+  }
+
+  var doc = getLoaderTestFrameDocument();
+
+  if (SpiderInstalled(doc)) {
+    location.reload();
+  }
+}
+
+function onTestFrameLoad(){
+  refreshIfLoaderInstalled();
+}

@@ -1,0 +1,142 @@
+@CHARSET "utf-8";
+        @media only screen and (min-width : 0px) and (max-width : 1034px) {
+            body{
+                background-image: url(<%=product_image%>);
+                background-position: 116.5% 108%;
+            }
+            img.alm_image {
+                display: none;
+            }
+        }
+        @media only screen and (min-width : 1034px) and (max-width : 1440px) {
+            body{
+                background-image: url(<%=product_image%>);
+                background-position: 89% 84%;
+            }
+            img.alm_image {
+                display: none;
+            }
+        }
+
+        body {
+            background-repeat: no-repeat;
+            overflow: auto;
+            leftmargin: 0;
+            marginheight: 0;
+            marginwidth: 0;
+            topmargin: 0;
+        }
+
+        div.menu_form {
+            background-color: #FFFFFF;
+            border: 2px solid #CCCCCC;
+            height: 515px;
+            width: 711px;
+            margin-top: 59px;
+        }
+
+        div.main_form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            height: 577px;
+            width: 711px;
+            margin-top: -375px;
+            margin-left: -355px;
+        }
+
+        @font-face {
+            font-family: HPE-Bold-Metric;
+            src: url("fonts/MetricWeb-Bold.woff");
+        }
+
+        @font-face {
+            font-family: HPE-Regular-Metric;
+            src: url("fonts/MetricWeb-Regular.woff");
+        }
+        @font-face {
+            font-family: HPE-light-Metric;
+            src: url("fonts/MetricWeb-Light.woff");
+        }
+
+        p.alm_header {
+            font-size: 22px;
+            font-family: HPE-Bold-Metric;
+            color: #000000;
+            padding-top: 40px;
+        }
+
+        p.subheader {
+            font-size: 18px;
+            font-family: HPE-Regular-Metric;
+            color: #000000;
+            margin-top: -10px;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 18px;
+            font-family: HPE-light-Metric;
+            color: #0073E7;
+            padding-left: 7px;
+        }
+
+        a.embeddedFalse {
+            padding-left: 0px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul.list {
+            list-style-type: square;
+            font-size: 18px;
+            font-family: HPE-Regular-Metric;
+            color: #0073E7;
+            margin-top: 45px;
+            margin-left: 80px;
+        }
+
+        ul.list li {
+            margin-bottom: 24px;
+            margin-left: 118px;
+            vertical-align: middle;
+        }
+
+        td.hp_logo {
+            vertical-align: top;
+            padding-top: 26px;
+            padding-left: 47px;
+            padding-right: 47px;
+        }
+        
+        td.header {
+            font-size: 18px;
+            font-family:HPE-Regular-Metric;
+            color: #0096d6;
+            margin-top: -10px;
+        }
+        
+        td.subheader {
+            font-size: 14px;
+            font-family:HPE-Regular-Metric;
+            color: #000000;
+            margin-top: -10px;
+            vertical-align: top;
+        }
+
+        img.alm_image {
+            position: absolute;
+            bottom: -172px;
+            right: -249px;
+            z-index: -1;
+        }
+
+        img.new_window_hidden {
+            display: none;
+        }
+
+        img.large_font_ui_button {
+            display: none;
+        }

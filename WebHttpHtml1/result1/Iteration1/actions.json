@@ -1,0 +1,26 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: qcbin",
+                "infFile": "t1.inf",
+                "time": 1618472622240
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Link: Tools",
+                "infFile": "t2.inf",
+                "time": 1618472622365
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Link: ALM Client Registration",
+                "infFile": "t3.inf",
+                "time": 1618472622441
+            }
+        ],
+        "transactions": []
+    }
+]

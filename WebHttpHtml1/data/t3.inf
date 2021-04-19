@@ -1,0 +1,13 @@
+[t3]
+FileName1=t3.htm
+URL1=http://15.114.153.208:8080/qcbin/CommonMode_index.html
+Total=2
+RequestHeaderFile=t3_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t3_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_3.xml
+FileName2=t3_dot_trans.gif
+URL2=http://15.114.153.208:8080/qcbin/more/img/dot_trans.gif
+[ProtocolInfo]
+ProtocolId=QTWeb

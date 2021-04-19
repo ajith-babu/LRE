@@ -1,0 +1,260 @@
+{
+  "FilterHeaders": [
+    {
+      "Header": "user-agent",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-language",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-encoding",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept",
+      "IncludeInScript": false
+    }
+  ],
+  "FilterResources": [
+    {
+      "IsNonResource": true,
+      "type": "text/html"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/css"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/x-icon"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/png"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/gif"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/javascript"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/font-woff"
+    }
+  ],
+  "GeneralInfo": {
+    "BrowserVersion": "",
+    "IsWinInetMode": false,
+    "MaxUsedConnections": 2,
+    "RecordedBrowser": "Internet Explorer",
+    "RecordingDate": "Mar-09-2021",
+    "RecordingDuration": 24477,
+    "RecordingMode": "N/A",
+    "RecordingTimeStamp": 1615263558,
+    "RecordingType": "Browser",
+    "TotalBytesReceived": 340695,
+    "TotalBytesSent": 7099,
+    "TotalRequests": 19,
+    "UserAgent": "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.1; WOW64; Trident/7.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; .NET4.0C; .NET4.0E)"
+  },
+  "HostInfo": [
+    {
+      "DomainName": "15.114.153.208",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "15.114.153.208",
+          "IncludeInScript": true,
+          "Name": "15.114.153.208",
+          "Port": 8080,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 95,
+              "HttpStatus": 404,
+              "Size": 289,
+              "URL": "http://15.114.153.208:8080/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 32,
+              "EventId": 93,
+              "HttpStatus": 200,
+              "Size": 49,
+              "URL": "http://15.114.153.208:8080/qcbin/more/img/dot_trans.gif"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 91,
+              "HttpStatus": 200,
+              "Size": 6560,
+              "URL": "http://15.114.153.208:8080/qcbin/CommonMode_index.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 0,
+              "EventId": 89,
+              "HttpStatus": 404,
+              "Size": 289,
+              "URL": "http://15.114.153.208:8080/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 31,
+              "EventId": 87,
+              "HttpStatus": 200,
+              "Size": 2536,
+              "URL": "http://15.114.153.208:8080/qcbin/more/img/top_bg.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 15,
+              "EventId": 85,
+              "HttpStatus": 404,
+              "Size": 314,
+              "URL": "http://15.114.153.208:8080/qcbin/more/img/bullet_red3.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 31,
+              "EventId": 83,
+              "HttpStatus": 200,
+              "Size": 3665,
+              "URL": "http://15.114.153.208:8080/qcbin/more/addins.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 81,
+              "HttpStatus": 200,
+              "Size": 7722,
+              "URL": "http://15.114.153.208:8080/qcbin/addins.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/x-icon",
+              "DownloadTime": 0,
+              "EventId": 71,
+              "HttpStatus": 200,
+              "Size": 9662,
+              "URL": "http://15.114.153.208:8080/qcbin/images/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff",
+              "DownloadTime": 32,
+              "EventId": 65,
+              "HttpStatus": 200,
+              "Size": 49553,
+              "URL": "http://15.114.153.208:8080/qcbin/fonts/MetricWeb-Bold.woff"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff",
+              "DownloadTime": 16,
+              "EventId": 62,
+              "HttpStatus": 200,
+              "Size": 44773,
+              "URL": "http://15.114.153.208:8080/qcbin/fonts/MetricWeb-Regular.woff"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff",
+              "DownloadTime": 15,
+              "EventId": 57,
+              "HttpStatus": 200,
+              "Size": 44197,
+              "URL": "http://15.114.153.208:8080/qcbin/fonts/MetricWeb-Light.woff"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 16,
+              "EventId": 50,
+              "HttpStatus": 200,
+              "Size": 59794,
+              "URL": "http://15.114.153.208:8080/qcbin/images/pc_logo.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 0,
+              "EventId": 48,
+              "HttpStatus": 200,
+              "Size": 1240,
+              "URL": "http://15.114.153.208:8080/qcbin/images/text_enlargement_icon.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 15,
+              "EventId": 46,
+              "HttpStatus": 200,
+              "Size": 1768,
+              "URL": "http://15.114.153.208:8080/qcbin/images/full_screen_icon.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 31,
+              "EventId": 42,
+              "HttpStatus": 200,
+              "Size": 5645,
+              "URL": "http://15.114.153.208:8080/qcbin/images/mf_logo.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 36,
+              "HttpStatus": 200,
+              "Size": 92635,
+              "URL": "http://15.114.153.208:8080/qcbin/jquery/jquery-1.9.1.min.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 33,
+              "HttpStatus": 200,
+              "Size": 3620,
+              "URL": "http://15.114.153.208:8080/qcbin/styles.css"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 30,
+              "HttpStatus": 200,
+              "Size": 6384,
+              "URL": "http://15.114.153.208:8080/qcbin/"
+            }
+          ],
+          "SSLCipher": "None",
+          "SSLVersion": "None"
+        }
+      ],
+      "IncludeInScript": true
+    }
+  ],
+  "WebSocket": {
+    "IncludeInScript": false,
+    "IsScriptIncludeWebSocket": false
+  },
+  "NumberOfCorrelations": 0
+}

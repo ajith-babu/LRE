@@ -1,0 +1,130 @@
+[API Trapper      ( 948:1568)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\iexplore.exe
+[API Trapper      (11d0:10c8)] Recording in 64-bit mode: C:\Program Files\Internet Explorer\IEXPLORE.EXE
+[API Trapper      ( b4c: 844)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\IEXPLORE.EXE
+[Network Analyzer (11d0:178c)] ------------------------------------------------------------------------------------------
+[Network Analyzer (11d0:178c)] Load Network Traffic Analyzers:
+[Network Analyzer (11d0:178c)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer (11d0:178c)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter_x64.dll)
+[Network Analyzer (11d0:178c)]     + Network Analyzer: api_http_filter_x64.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer (11d0:178c)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter_x64.dll
+[Network Analyzer (11d0:178c)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer_x64.dll)
+[Network Analyzer (11d0:178c)]     + Network Analyzer: WebSocketAnalyzer_x64.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer (11d0:178c)]     Analyzer Module: local_server (value=)
+[Network Analyzer (11d0:178c)] ------------------------------------------------------------------------------------------
+[Network Analyzer (11d0:15dc)] Address lookup for iwf01pc10 = 15.114.153.210
+[Network Analyzer (11d0:178c)] Address lookup for iwf01pc10 = 15.114.153.210
+[Network Analyzer (11d0:178c)] Request Connection: Remote Server @ 15.120.32.50:80   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      (11d0:15dc)] "GET /"   
+[Network Analyzer (11d0:15dc)]   (Sid:  1) Client -> Server @ : 131 bytes (Service=HTTP)
+[Network Analyzer (11d0:15dc)]   (Sid:  1) Server -> Client : 3068 bytes  (Service=HTTP)
+[Network Analyzer (11d0:15dc)]   (Sid:  1) Server -> Client : 7300 bytes  (Service=HTTP)
+[Network Analyzer (11d0:15dc)]   (Sid:  1) Server -> Client : 10220 bytes  (Service=HTTP)
+[Network Analyzer (11d0:15dc)]   (Sid:  1) Server -> Client : 810 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:1730)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( b4c:1730)] Load Network Traffic Analyzers:
+[Network Analyzer ( b4c:1730)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer ( b4c:1730)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer ( b4c:1730)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer ( b4c:1730)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer ( b4c:1730)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer ( b4c:1730)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer ( b4c:1730)]     Analyzer Module: local_server (value=)
+[Network Analyzer ( b4c:1730)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( b4c:14c8)] Address lookup for iwf01pc10 = 15.114.153.210
+[Network Analyzer ( b4c:1730)] Address lookup for iwf01pc10 = 15.114.153.210
+[Network Analyzer ( b4c:1730)] Request Connection: Remote Server @ 15.114.153.208:8080   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      ( b4c:14c8)] "GET /qcbin/"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Client -> Server @ : 315 bytes (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 6652 bytes  (Service=HTTP)
+[Web Request      ( b4c:14c8)] "GET /qcbin/styles.css"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Client -> Server @ : 369 bytes (Service=HTTP)
+[Network Analyzer ( b4c:1730)] Address lookup for iwf01pc10 = 15.114.153.210
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 3838 bytes  (Service=HTTP)
+[Web Request      ( b4c:14c8)] "GET /qcbin/jquery/jquery-1.9.1.min.js"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Client -> Server @ : 385 bytes (Service=HTTP)
+[Network Analyzer ( b4c:1730)] Request Connection: Remote Server @ 15.114.153.208:8080   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 6944 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Web Request      ( b4c:14c8)] "GET /qcbin/images/mf_logo.png"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Client -> Server @ : 377 bytes (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Server -> Client : 5864 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 4004 bytes  (Service=HTTP)
+[Web Request      ( b4c:14c8)] "GET /qcbin/images/full_screen_icon.png"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Client -> Server @ : 386 bytes (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Server -> Client : 1987 bytes  (Service=HTTP)
+[Web Request      ( b4c:14c8)] "GET /qcbin/images/text_enlargement_icon.png"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Client -> Server @ : 391 bytes (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 1459 bytes  (Service=HTTP)
+[Web Request      ( b4c:14c8)] "GET /qcbin/images/pc_logo.png"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Client -> Server @ : 377 bytes (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 10862 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:15a4)] Address lookup for iwf01pc10 = 15.114.153.210
+[Network Analyzer ( b4c:15a4)] Request Connection: Remote Server @ 15.114.153.208:8080   (Service=)  (Sid=  3)  PROXIED!
+[Web Request      ( b4c:14c8)] "GET /qcbin/fonts/MetricWeb-Light.woff"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Client -> Server @ : 385 bytes (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 6944 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 4717 bytes  (Service=HTTP)
+[Web Request      ( b4c:14c8)] "GET /qcbin/fonts/MetricWeb-Regular.woff"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Client -> Server @ : 387 bytes (Service=HTTP)
+[Web Request      ( b4c:14c8)] "GET /qcbin/fonts/MetricWeb-Bold.woff"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Client -> Server @ : 384 bytes (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  1) Server -> Client : 12237 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Server -> Client : 16384 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Server -> Client : 633 bytes  (Service=HTTP)
+[Web Request      ( b4c:14c8)] "GET /qcbin/images/favicon.ico"   
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Client -> Server @ : 309 bytes (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Server -> Client : 6944 bytes  (Service=HTTP)
+[Network Analyzer ( b4c:14c8)]   (Sid:  2) Server -> Client : 2940 bytes  (Service=HTTP)
+[API Trapper      ( 278:17a0)] Recording in 32-bit mode: C:\Program Files (x86)\Internet Explorer\IEXPLORE.EXE
+[Network Analyzer ( 278:1240)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( 278:1240)] Load Network Traffic Analyzers:
+[Network Analyzer ( 278:1240)]     Analyzer Module: WPLUS (value=)
+[Network Analyzer ( 278:1240)]     Analyzer Module: WebBase (value=GetHttpProtocolAnalyzer:api_http_filter.dll)
+[Network Analyzer ( 278:1240)]     + Network Analyzer: api_http_filter.dll @ GetHttpProtocolAnalyzer Loaded!
+[Network Analyzer ( 278:1240)]     + Interception Auditors: WinInetWplusInterceptionAudit:api_http_filter.dll
+[Network Analyzer ( 278:1240)]     Analyzer Module: QTWeb (value=GetWebSocketProtocolAnalyzer:WebSocketAnalyzer.dll)
+[Network Analyzer ( 278:1240)]     + Network Analyzer: WebSocketAnalyzer.dll @ GetWebSocketProtocolAnalyzer Loaded!
+[Network Analyzer ( 278:1240)]     Analyzer Module: local_server (value=)
+[Network Analyzer ( 278:1240)] ------------------------------------------------------------------------------------------
+[Network Analyzer ( 278: 628)] Address lookup for iwf01pc10 = 15.114.153.210
+[Network Analyzer ( 278:1240)] Address lookup for iwf01pc10 = 15.114.153.210
+[Network Analyzer ( 278:169c)] Address lookup for iwf01pc10 = 15.114.153.210
+[Network Analyzer ( 278:1240)] Request Connection: Remote Server @ 15.114.153.208:8080   (Service=)  (Sid=  1)  PROXIED!
+[Web Request      ( 278: 628)] "GET /qcbin/addins.html"   
+[Network Analyzer ( 278: 628)]   (Sid:  1) Client -> Server @ : 370 bytes (Service=HTTP)
+[Network Analyzer ( 278:169c)] Request Connection: Remote Server @ 15.114.153.208:8080   (Service=)  (Sid=  2)  PROXIED!
+[Network Analyzer ( 278: 628)]   (Sid:  1) Server -> Client : 7941 bytes  (Service=HTTP)
+[Web Request      ( 278: 628)] "GET /qcbin/more/addins.css"   
+[Network Analyzer ( 278: 628)]   (Sid:  1) Client -> Server @ : 385 bytes (Service=HTTP)
+[Network Analyzer ( 278: 628)]   (Sid:  1) Server -> Client : 3883 bytes  (Service=HTTP)
+[Web Request      ( 278: 628)] "GET /qcbin/more/img/top_bg.png"   
+[Network Analyzer ( 278: 628)]   (Sid:  1) Client -> Server @ : 389 bytes (Service=HTTP)
+[Web Request      ( 278: 628)] "GET /qcbin/more/img/bullet_red3.png"   
+[Network Analyzer ( 278: 628)]   (Sid:  2) Client -> Server @ : 394 bytes (Service=HTTP)
+[Network Analyzer ( 278: 628)]   (Sid:  2) Server -> Client : 526 bytes  (Service=HTTP)
+[Network Analyzer ( 278: 628)]   (Sid:  1) Server -> Client : 2755 bytes  (Service=HTTP)
+[Web Request      ( 278: 628)] "GET /favicon.ico"   
+[Network Analyzer ( 278: 628)]   (Sid:  1) Client -> Server @ : 296 bytes (Service=HTTP)
+[Network Analyzer ( 278: 628)]   (Sid:  1) Server -> Client : 468 bytes  (Service=HTTP)
+[Web Request      ( 278: 628)] "GET /qcbin/CommonMode_index.html"   
+[Network Analyzer ( 278: 628)]   (Sid:  1) Client -> Server @ : 502 bytes (Service=HTTP)
+[Network Analyzer ( 278: 628)]   (Sid:  1) Server -> Client : 6779 bytes  (Service=HTTP)
+[Web Request      ( 278: 628)] "GET /qcbin/more/img/dot_trans.gif"   
+[Network Analyzer ( 278: 628)]   (Sid:  1) Client -> Server @ : 402 bytes (Service=HTTP)
+[Network Analyzer ( 278: 628)]   (Sid:  1) Server -> Client : 266 bytes  (Service=HTTP)
+[Web Request      ( 278: 628)] "GET /favicon.ico"   
+[Network Analyzer ( 278: 628)]   (Sid:  1) Client -> Server @ : 296 bytes (Service=HTTP)
+[Network Analyzer ( 278: 628)]   (Sid:  1) Server -> Client : 468 bytes  (Service=HTTP)

@@ -1,0 +1,172 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+    
+    <TITLE>Micro Focus ALM - Performance Center 12.60
+    </TITLE>
+
+    <script type="text/javascript" src="jquery/jquery-1.9.1.min.js"></script>
+    
+    <!--[if lte IE 9]>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var windowHeight = $(document).innerHeight();
+            var windowWidth = $(document).innerWidth();
+            if (windowWidth <= 1150) {
+                $(".alm_image").hide();
+                var alm_logo_horizontal = $(".main_form").width() + 13;
+                var alm_logo_vertical = $(".main_form").height() / 2 + 45;
+
+                $("body").css('background-image', "url(" + 'images/pc_logo.png' + ")");
+                $("body").css('background-position-x', alm_logo_horizontal);
+                $("body").css('background-position-y', alm_logo_vertical);
+            }
+
+            if (windowWidth > 1150 && windowWidth <= 1440) {
+                $(".alm_image").hide();
+                var alm_logo_horizontal = $(".main_form").width() + 223;
+                var alm_logo_vertical = $(".main_form").height() / 2 + 110;
+
+                $("body").css('background-image', "url(" + 'images/pc_logo.png' + ")");
+                $("body").css('background-position-x', alm_logo_horizontal);
+                $("body").css('background-position-y', alm_logo_vertical);
+
+            }
+        });
+    </script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        // Depending on configuration we can have a variable number of links on our landing page.
+        // Here we make sure that all links fit into the '.menu_form' div.
+        $(document).ready(function () {
+            var delta = $("li").length - 8;
+            if (delta > 0) {
+                var defaultHeight = $(".menu_form").height();
+                var entryHeight = -($("li").position().top - $("li").next().position().top);
+
+                $(".menu_form").css("height", defaultHeight + delta * entryHeight);
+            }
+        });
+    </script>
+
+    
+    <style type="text/css" media="all">
+        @media only screen and (min-width: 0px) and (max-width: 1034px) {
+            body {
+                background-image: url(images/pc_logo.png);
+                background-position: 116.5% 108%;
+            }
+
+            img.alm_image {
+                display: none;
+            }
+        }
+
+        @media only screen and (min-width: 1034px) and (max-width: 1440px) {
+            body {
+                background-image: url(images/pc_logo.png);
+                background-position: 89% 84%;
+            }
+
+            img.alm_image {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+<script>
+    var check_for_firefox = detect_browser("Firefox");
+
+    if (check_for_firefox) {
+        document.getElementsByTagName('body')[0].style.backgroundPosition = "91% -111%";
+    }
+
+    function detect_browser(look_for) {
+        var user_agent_string = navigator.userAgent;
+        var search_for_string = user_agent_string.search(look_for);
+        return search_for_string > -1;
+    }
+</script>
+
+<div class="main_form">
+    <div class="menu_form">
+        <table>
+            <tr>
+                <td class="hp_logo">
+                    <img src="images/mf_logo.png" alt="" border="0"/>
+                </td>
+                <td>
+                    <p class="alm_header">Application Lifecycle Management</p>
+
+                    <p class="subheader">Performance Center
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    <ul class="list">
+                        
+                        <li><a href="start_a.jsp">ALM Desktop Client</a>&nbsp;&nbsp;<a class="embeddedFalse"
+                                                                                       href="start_a.jsp?embedclient=false"><img
+                                class="" src="images/full_screen_icon.png" border="0"
+                                alt="Open in Full Screen mode"/></a>&nbsp;&nbsp;<a class="embeddedFalse"
+                                                                                   href="start_a.jsp?LargeUI=true"><img
+                                class="large_font_ui_button" src="images/text_enlargement_icon.png" border="0"
+                                alt="Start ALM in Large Fonts mode"/></a>
+                                
+
+                                
+                        <li>
+                            <a href="start_a.jsp?projectType=LabManagement">Lab Management
+                            </a>&nbsp;<a class="embeddedFalse"
+                                         href="start_a.jsp?projectType=LabManagement&embedclient=false"><img
+                                class="" src="images/full_screen_icon.png" border="0"
+                                alt="Open in Full Screen mode"/></a>
+                                
+                                
+                        <li><a href="loadtest/index.jsp">My Performance Center</a>
+                        <li><a href="loadtest/index.jsp?url=admin">Performance Center Administration</a>
+                                
+
+                        <li><a href="SiteAdmin.jsp">Site Administration</a>
+                                
+                                
+                        <li><a href="addins.html" target="_blank">Tools</a>
+                        <li><a href="apikey-management">API Key</a>
+                        <li><a href="https://admhelp.microfocus.com/alm/en/12.60/online_help/Content/Readme/Readme.htm" target="_blank">Readme</a>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <img class="alm_image" src="images/pc_logo.png" id="alm_image" alt="" border="0"/>
+</div>
+</body>
+
+</html>
