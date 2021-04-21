@@ -27,6 +27,6 @@ Action()
 		"Text=ALM Client Registration", 
 		"Snapshot=t3.inf", 
 		LAST);
-
+//
 	return 0;
 }
